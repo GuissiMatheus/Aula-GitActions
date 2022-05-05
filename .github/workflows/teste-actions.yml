@@ -1,0 +1,7 @@
+name: Teste GitHub Actions
+on: [push]
+jobs:
+  Teste-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Meu primeiro teste com o Actions :)"
