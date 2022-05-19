@@ -1,0 +1,15 @@
+name: Ionic
+on: [push]
+jobs:
+  Check-Ionic-Version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out do repositório
+        uses: actions/checkout@v3
+      - name: Configura a versão do Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install ionic
+      - run: ionic info
+      - run: ionic -v
