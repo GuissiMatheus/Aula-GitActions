@@ -11,4 +11,4 @@ jobs:
         with:
           node-version: 16
       - run: npm install ionic
-      - run: ionic -v
+      - run: ionic -version
