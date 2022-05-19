@@ -1,0 +1,25 @@
+name: Git Actions
+on: [push]
+jobs:
+  Check-Electron-Version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out do repositório
+        uses: actions/checkout@v3
+      - name: Configura a versão do Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install electron
+      - run: npx electron --version
+  Check-Angular-Version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out do repositório
+        uses: actions/checkout@v3
+      - name: Configura a versão do Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install -g @angular/cli
+      - run: ng version
